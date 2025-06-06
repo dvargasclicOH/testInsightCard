@@ -28,9 +28,12 @@ function App() {
 
   // Enviar alto dinámico a Kustomer para redimensionar Insight Card
   useEffect(() => {
+    console.log('Estoy en iframe?', window.self !== window.top);
     const sendHeight = () => {
       if (formRef.current) {
         const height = formRef.current.scrollHeight;
+        console.log('Enviando resize con altura:', height); // <-- Asegúrate de ver esto en consola
+
         window.parent.postMessage(
           {
             type: 'kustomer:resize',
