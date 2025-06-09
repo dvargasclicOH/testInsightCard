@@ -32,7 +32,7 @@ function App() {
     const sendHeight = () => {
       if (formRef.current) {
         const height = formRef.current.scrollHeight;
-        console.log('Enviando resize con altura:', height);
+        console.log('Enviando resize con altura...:', height);
 
         window.parent.postMessage(
           {
