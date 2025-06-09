@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container } from './Container';
+import { Container } from 'kustomer-apps-platform';
 
 function App() {
   const [formData, setFormData] = useState({
