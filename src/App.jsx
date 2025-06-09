@@ -23,7 +23,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Datos del formulario:', formData);
+    console.log('Datos del formulario...:', formData);
   };
 
   
