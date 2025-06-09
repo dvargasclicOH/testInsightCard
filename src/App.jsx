@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Container } from 'kustomer-apps-platform'; // Ajusta el import según tu entorno
 
 function App() {
   const [formData, setFormData] = useState({
@@ -61,21 +62,23 @@ function App() {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
-      {Object.keys(formData).map((campo, index) => (
-        <div key={index}>
-          <label htmlFor={campo}>{campo}:</label>
-          <input
-            id={campo}
-            type="text"
-            name={campo}
-            value={formData[campo]}
-            onChange={handleChange}
-          />
-        </div>
-      ))}
-      <button type="submit">Enviar</button>
-    </form>
+    <Container>
+      <form onSubmit={handleSubmit} ref={formRef}>
+        {Object.keys(formData).map((campo, index) => (
+          <div key={index}>
+            <label htmlFor={campo}>{campo}:</label>
+            <input
+              id={campo}
+              type="text"
+              name={campo}
+              value={formData[campo]}
+              onChange={handleChange}
+            />
+          </div>
+        ))}
+        <button type="submit">Enviar</button>
+      </form>
+    </Container>
   );
 }
 
