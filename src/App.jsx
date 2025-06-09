@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { Container } from './changeName';
+import { useState } from 'react';
+import { Container } from './Container';
+
 function App() {
   const [formData, setFormData] = useState({
     campo1: '',
@@ -14,8 +15,6 @@ function App() {
     campo10: '',
   });
 
-  const formRef = useRef(null);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -26,43 +25,9 @@ function App() {
     console.log('Datos del formulario:', formData);
   };
 
-  
-  useEffect(() => {
-    console.log('Estoy en iframe?', window.self !== window.top);
-    const sendHeight = () => {
-      if (formRef.current) {
-        const height = formRef.current.scrollHeight;
-        console.log('Enviando resize con altura...:', height);
-
-        window.parent.postMessage(
-          {
-            type: 'kustomer:resize',
-            height,
-          },
-          '*'
-        );
-      }
-    };
-
-    // Llamar al cargar
-    sendHeight();
-
-    // Observar cambios de tamaño
-    const observer = new ResizeObserver(sendHeight);
-    if (formRef.current) {
-      observer.observe(formRef.current);
-    }
-
-    return () => {
-      if (formRef.current) {
-        observer.unobserve(formRef.current);
-      }
-    };
-  }, []);
-
   return (
     <Container>
-      <form onSubmit={handleSubmit} ref={formRef}>
+      <form onSubmit={handleSubmit}>
         {Object.keys(formData).map((campo, index) => (
           <div key={index}>
             <label htmlFor={campo}>{campo}:</label>
