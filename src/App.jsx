@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { Container } from 'kustomer-apps-platform'; // Ajusta el import según tu entorno
 
 function App() {
   const [formData, setFormData] = useState({
