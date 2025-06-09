@@ -1,13 +1,5 @@
 import { useState } from 'react';
-
-let Container;
-try {
-  // Intenta importar el Container real (solo funcionará en Kustomer)
-  Container = require('kustomer-apps-platform').Container;
-} catch (e) {
-  // Si falla, usa el mock local
-  Container = require('./Container').Container;
-}
+import { Container } from './Container';
 
 function App() {
   const [formData, setFormData] = useState({
