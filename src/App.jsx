@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-
+import { Container } from './Container';
 function App() {
   const [formData, setFormData] = useState({
     campo1: '',
@@ -26,13 +26,13 @@ function App() {
     console.log('Datos del formulario:', formData);
   };
 
-  // Enviar alto dinámico a Kustomer para redimensionar Insight Card
+  
   useEffect(() => {
     console.log('Estoy en iframe?', window.self !== window.top);
     const sendHeight = () => {
       if (formRef.current) {
         const height = formRef.current.scrollHeight;
-        console.log('Enviando resize con altura:', height); // <-- Asegúrate de ver esto en consola
+        console.log('Enviando resize con altura:', height);
 
         window.parent.postMessage(
           {
