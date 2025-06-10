@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <h1>Ejemplos de Padding en React</h1>
 
-      {/*<h2>Formulario Sin Padding (Contenido pegado)</h2>
+      <h2>Formulario Sin Padding (Contenido pegado)</h2>
       <FormularioSinPadding />
 
-      <hr />*/}
+      <hr />
 
       <h2>Formulario Con Padding (Contenido espaciado)</h2>
       <FormularioConPadding />
