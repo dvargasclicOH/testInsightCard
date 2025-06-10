@@ -1,4 +1,5 @@
 // src/App.js
+import { Container } from '@kustomer/apps-platform'; // Asegúrate de importar los componentes necesarios
 import FormularioSinPadding from './FormularioSinPadding';
 import FormularioConPadding from './FormularioConPadding';
 import './App.css'; // Estilos generales de la app
