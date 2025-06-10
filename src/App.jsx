@@ -5,17 +5,19 @@ import './App.css'; // Estilos generales de la app
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ejemplos de Padding en React</h1>
+    <Container usePadding={true}>
+      <div className="App">
+        <h1>Ejemplos de Padding en React</h1>
 
-      <h2>Formulario Sin Padding (Contenido pegado)</h2>
-      <FormularioSinPadding />
+        <h2>Formulario Sin Padding (Contenido pegado)</h2>
+        <FormularioSinPadding />
 
-      <hr />
+        <hr />
 
-      <h2>Formulario Con Padding (Contenido espaciado)</h2>
-      <FormularioConPadding />
-    </div>
+        <h2>Formulario Con Padding (Contenido espaciado)</h2>
+        <FormularioConPadding />
+      </div>
+    </Container>
   );
 }
 
