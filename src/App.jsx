@@ -1,6 +1,6 @@
 // src/App.js
-import FormularioSinPadding from './components/FormularioSinPadding';
-import FormularioConPadding from './components/FormularioConPadding';
+import FormularioSinPadding from './FormularioSinPadding';
+import FormularioConPadding from './FormularioConPadding';
 import './App.css'; // Estilos generales de la app
 
 function App() {
