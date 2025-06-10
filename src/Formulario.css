@@ -1,0 +1,65 @@
+/* Estilo para el contenedor general de la "tarjeta" */
+.card-like-element {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ancho de ejemplo */
+  margin: 20px auto; /* Centrar en la página */
+}
+
+/* Este es el equivalente a 'Container usePadding' en Kustomer.
+   Aplica un padding uniforme a los 4 lados del contenedor.
+*/
+.container-with-padding {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ancho de ejemplo */
+  margin: 20px auto; /* Centrar en la página */
+  
+  /* ---- ESTO ES LO CLAVE ---- */
+  padding: 20px; /* Aquí aplicamos el padding estandarizado de 20px a todos los lados */
+}
+
+/* Estilos básicos para los elementos del formulario para que se vean mejor */
+.container-with-padding h2 {
+  margin-top: 0; /* Remover margen superior por defecto para que no se pegue al padding */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container-with-padding div {
+  margin-bottom: 10px;
+}
+
+.container-with-padding label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.container-with-padding input[type="text"],
+.container-with-padding input[type="email"] {
+  width: calc(100% - 10px); /* Ajustar ancho para el padding del input */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.container-with-padding button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.container-with-padding button:hover {
+  background-color: #0056b3;
+}
