@@ -16,8 +16,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ancho de ejemplo */
-  margin: 0px auto; /* Centrar en la página */
+  width: 300px; /* Ancho de ejemplo */  
   
   /* ---- ESTO ES LO CLAVE ---- */
   padding: 20px; /* Aquí aplicamos el padding estandarizado de 20px a todos los lados */
